@@ -32,7 +32,8 @@ public class TriangleType {
 
     // Helper method to check triangle validity
     public static boolean isValidTriangle(double a, double b, double c) {
-        return (a + b > c) && (a + c > b) && (b + c > a)
+        // ❌ Bug: '>' changed to '<' in the first condition
+        return (a + b < c) && (a + c > b) && (b + c > a)
                 && a > 0 && b > 0 && c > 0;
     }
 }
