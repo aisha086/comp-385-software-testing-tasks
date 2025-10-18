@@ -14,10 +14,13 @@ public class TriangleType {
         if (isValidTriangle(a, b, c)) {
             // Step 2: Determine triangle type
             if (a == b && b == c) {
+                //equilateral if all sides are equal
                 System.out.println("This is an Equilateral triangle.");
             } else if (a == b || b == c || a == c) {
+                //else isosceles if 2 sides are equal
                 System.out.println("This is an Isosceles triangle.");
             } else {
+                //else scalene if no sides are equal
                 System.out.println("This is a Scalene triangle.");
             }
         } else {
